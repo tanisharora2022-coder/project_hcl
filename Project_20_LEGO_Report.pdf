@@ -1,0 +1,137 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R 11 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 2181 >>
+stream
+BT /F2 11 Tf 48 790 Td (HCL PROJECT 20 | PROJECT REPORT) Tj ET
+BT /F2 21 Tf 48 757 Td (Data Quality, Drift & Pipeline Observability) Tj ET
+BT /F2 13 Tf 48 723 Td (LEGO Sets and Themes \(1975-2025\)) Tj ET
+BT /F1 10 Tf 48 692 Td (Tanish Arora | B.Tech CSE \(AI/ML\), Section 6 | HCL Batch 7) Tj ET
+BT /F1 10 Tf 48 676 Td (Admission no. 2026B15310502 | 21 November 2026) Tj ET
+BT /F1 10 Tf 48 647 Td (GitHub: https://github.com/tanisharora2022-coder/project_hcl) Tj ET
+BT /F2 15 Tf 48 616 Td (1. Objective) Tj ET
+BT /F1 10 Tf 48 591 Td (Build a monitoring workflow for missing data, duplicate set IDs, invalid piece counts, unknown) Tj ET
+BT /F1 10 Tf 48 575 Td (themes, distribution drift, volume change and late arrival. This report uses stored results) Tj ET
+BT /F1 10 Tf 48 559 Td (from project_hcl\(1\).ipynb.) Tj ET
+BT /F2 15 Tf 48 537 Td (2. Dataset and preparation) Tj ET
+BT /F1 10 Tf 48 512 Td (The Kaggle LEGO sets, themes and minifigures dataset is loaded with pandas. The notebook uses) Tj ET
+BT /F1 10 Tf 48 496 Td (18,540 set rows and 464 theme rows. Six set fields are retained: set_num, name, year,) Tj ET
+BT /F1 10 Tf 48 480 Td (theme_name, parent_theme and num_parts. Themes are trimmed and numeric fields converted.) Tj ET
+BT /F1 10 Tf 48 464 Td (Historical windows: 2015-2019 \(3,534 sets\) and 2020-2024 \(3,874 sets\). A copy of the newer) Tj ET
+BT /F1 10 Tf 48 448 Td (window is deliberately modified to test the alerts.) Tj ET
+BT /F2 15 Tf 48 426 Td (Output snippet 1: loading and snapshots) Tj ET
+BT /F1 9 Tf 58 398 Td (Total sets: 18540) Tj ET
+BT /F1 9 Tf 58 383 Td (Total themes: 464) Tj ET
+BT /F1 9 Tf 58 368 Td (Missing or unreadable years: 0) Tj ET
+BT /F1 9 Tf 58 353 Td (Duplicate theme IDs: 0) Tj ET
+BT /F1 9 Tf 58 338 Td (2015-2019: 3534 sets) Tj ET
+BT /F1 9 Tf 58 323 Td (2020-2024: 3874 sets) Tj ET
+BT /F2 15 Tf 48 293 Td (3. Simulated faults) Tj ET
+BT /F1 10 Tf 48 268 Td (The test copy adds a column, changes one piece count to -10, makes one piece count empty,) Tj ET
+BT /F1 10 Tf 48 252 Td (creates an unknown theme pair and duplicates one set ID. The simulated file arrives 3 days) Tj ET
+BT /F1 10 Tf 48 236 Td (after its expected date.) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Annot /Subtype /Link /Rect [48 639 405 657] /Border [0 0 0] /A << /S /URI /URI (https://github.com/tanisharora2022-coder/project_hcl) >> >>
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R /Annots [6 0 R] >>
+endobj
+8 0 obj
+<< /Length 1889 >>
+stream
+BT /F2 11 Tf 48 790 Td (PROJECT 20 | RESULTS) Tj ET
+BT /F2 15 Tf 48 767 Td (4. Data quality results) Tj ET
+BT /F1 10 Tf 48 742 Td (The original historical windows pass all six defined quality checks. Each deliberately) Tj ET
+BT /F1 10 Tf 48 726 Td (introduced test issue is detected.) Tj ET
+BT /F2 15 Tf 48 704 Td (Output snippet 2: quality summary) Tj ET
+BT /F1 9 Tf 58 676 Td (                         Old   New   Test) Tj ET
+BT /F1 9 Tf 58 661 Td (Missing columns            0     0      0) Tj ET
+BT /F1 9 Tf 58 646 Td (Extra columns              0     0      1) Tj ET
+BT /F1 9 Tf 58 631 Td (Empty required cells       0     0      1) Tj ET
+BT /F1 9 Tf 58 616 Td (Duplicate set IDs          0     0      1) Tj ET
+BT /F1 9 Tf 58 601 Td (Invalid piece counts       0     0      1) Tj ET
+BT /F1 9 Tf 58 586 Td (Unknown theme pairs        0     0      1) Tj ET
+BT /F2 15 Tf 48 556 Td (5. Piece-count distribution) Tj ET
+BT /F1 9 Tf 58 528 Td (Pieces per set     2015-2019    2020-2024) Tj ET
+BT /F1 9 Tf 58 513 Td (0-99                   57.8%        49.1%) Tj ET
+BT /F1 9 Tf 58 498 Td (100-499                28.9%        30.5%) Tj ET
+BT /F1 9 Tf 58 483 Td (500-999                 8.4%        11.2%) Tj ET
+BT /F1 9 Tf 58 468 Td (1000+                   4.8%         9.2%) Tj ET
+BT /F2 15 Tf 48 438 Td (Output snippet 3: drift and volume) Tj ET
+BT /F1 9 Tf 58 410 Td (Excluded: 0 | Median pieces: 70.0) Tj ET
+BT /F1 9 Tf 58 395 Td (Excluded: 0 | Median pieces: 107.0) Tj ET
+BT /F1 9 Tf 58 380 Td (Biggest shift: 0-99 pieces) Tj ET
+BT /F1 9 Tf 58 365 Td (Size share change: 8.7 percentage points) Tj ET
+BT /F1 9 Tf 58 350 Td (Set count change: 9.6 %) Tj ET
+BT /F1 10 Tf 48 326 Td (The largest piece-group change is 8.7 percentage points, below the configured 10 point alert) Tj ET
+BT /F1 10 Tf 48 310 Td (limit. Volume rises 9.6%, below the 30% threshold. Neither produces a warning.) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R  >>
+endobj
+10 0 obj
+<< /Length 2281 >>
+stream
+BT /F2 11 Tf 48 790 Td (PROJECT 20 | ALERTS AND CONCLUSION) Tj ET
+BT /F2 15 Tf 48 767 Td (6. Alert log) Tj ET
+BT /F1 10 Tf 48 742 Td (Quality issues are errors when their count exceeds zero. A delay over two days is a warning.) Tj ET
+BT /F1 10 Tf 48 726 Td (The test produces five errors and one warning.) Tj ET
+BT /F2 15 Tf 48 704 Td (Output snippet 4: saved alert log) Tj ET
+BT /F1 9 Tf 58 676 Td (Sample  Issue                     Observed  Limit  Level) Tj ET
+BT /F1 9 Tf 58 661 Td (Test    Extra columns                   1      0  Error) Tj ET
+BT /F1 9 Tf 58 646 Td (Test    Empty required cells            1      0  Error) Tj ET
+BT /F1 9 Tf 58 631 Td (Test    Duplicate set IDs               1      0  Error) Tj ET
+BT /F1 9 Tf 58 616 Td (Test    Invalid piece counts            1      0  Error) Tj ET
+BT /F1 9 Tf 58 601 Td (Test    Unknown theme pairs             1      0  Error) Tj ET
+BT /F1 9 Tf 58 586 Td (Test    Late delivery \(days\)            3      2  Warning) Tj ET
+BT /F2 15 Tf 48 556 Td (7. Deliverables and interpretation) Tj ET
+BT /F1 10 Tf 48 531 Td (The final notebook cell saves quality_summary.csv, drift_report.csv and alert_log.csv in Colab.) Tj ET
+BT /F1 10 Tf 48 515 Td (The notebook output confirms: Saved all 3 reports. The CSV files were not included with the) Tj ET
+BT /F1 10 Tf 48 499 Td (supplied notebook.) Tj ET
+BT /F1 10 Tf 48 483 Td (The historical snapshots pass the specified checks. The simulated defects and late arrival) Tj ET
+BT /F1 10 Tf 48 467 Td (trigger the intended alerts. The share of sets with 0-99 pieces falls from 57.8% to 49.1%,) Tj ET
+BT /F1 10 Tf 48 451 Td (while the 1000+ group grows from 4.8% to 9.2%.) Tj ET
+BT /F2 15 Tf 48 429 Td (8. Limitations and next steps) Tj ET
+BT /F1 10 Tf 48 404 Td (This is a notebook demonstration, not a scheduled monitor. The arrival dates and thresholds are) Tj ET
+BT /F1 10 Tf 48 388 Td (fixed in code. A deployed pipeline should record run timestamps, assign alert owners, retain) Tj ET
+BT /F1 10 Tf 48 372 Td (past runs and tune thresholds against normal variation to reduce false alarms.) Tj ET
+BT /F1 9 Tf 48 344 Td (Source: submitted project_hcl\(1\).ipynb. Snippets reproduce saved notebook text outputs;) Tj ET
+BT /F1 9 Tf 48 329 Td (distribution percentages are rounded.) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R  >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000128 00000 n 
+0000000198 00000 n 
+0000000273 00000 n 
+0000002506 00000 n 
+0000002671 00000 n 
+0000002823 00000 n 
+0000004764 00000 n 
+0000004901 00000 n 
+0000007235 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R >>
+startxref
+7374
+%%EOF
